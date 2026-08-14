@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 요소 다양한 제어 방법</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <script src="./scripts/dom.js"defer></script>
+    <style>
+        /* 1. 바로구매 툴팁 data 활용 */
+        .cart_buy a:nth-child(2) {
+            position:relative; background-color: #f5f5f5;
+        }
+        .cart_buy a:nth-child(2)::after {
+            /* attr-> 속성을 불러오는 함수 */
+            content:attr(data-tooltip); /* 의미적인 내용은 HTML, css는 attr()로 불러오기 */
+            display:none;/* 초기 숨기기 */ 
+            background-color: #111; color:#fff;
+            position:absolute; left:50%; bottom:-30px; transform:translateX(-50%);
+            width:max-content; padding:6px 6px; border-radius:10px;
+        }
+        .cart_buy a:nth-child(2):hover::after {display:block;}
+    </style>
+</head>
+<body>
+    <button type="button" id="btn1">click!</button>
+    <h1>DOM data-* 속성 활용</h1>
+    <section>
+        <div class="cart_buy" data-name="btn_group">
+            <a href="#">장바구니</a>
+            <a href="#" data-tooltip="로그인하셔야 가능합니다.">바로구매</a>
+            <!-- 바로구매에 마우스 올렸을 때 툴팁으로 '로그인하셔야 가능합니다.'실행 -->
+        </div>
+        <div class="count">
+            <button type="button" id="minus">-</button>
+            <span class="count_num" data-count="1"></span>
+            <button type="button" id="plus">+</button>
+        </div>
+    </section>
+</body>
+</html>
