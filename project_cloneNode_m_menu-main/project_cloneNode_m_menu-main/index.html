@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSION</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/index.js" defer></script>
+</head>
+<body>
+    <header class="flex-r-between">
+        <h1 class="z-index-90"><a href="./index.html"><img src="./images/logo.svg" alt="VSION"></a></h1>
+        <nav class="full_nav"><!-- 데스크탑 해상도 시 메뉴 -->
+            <div class="menu flex-r-between">
+                <a href="#">Vsion</a>
+                <a href="#">Technology</a>
+                <a href="#">Products</a>
+                <a href="#">Cases</a>
+                <a href="#">News</a>
+            </div>
+        </nav>
+        <div class="lnb flex-r-between">
+            <div class="lang_contact flex-r-between z-index-90">
+                <div class="lang">
+                    <a href="#" class="kr active">KR</a>
+                    <a href="#" class="en">EN</a>
+                </div>
+                <button type="button" id="contact_btn" class="z-index-90">
+                    <span>Contact Us</span>
+                    <img class="z-index-90" src="https://cdn-icons-png.flaticon.com/128/271/271226.png" alt="">
+                </button>
+            </div>
+            <div class="mobile_ver">
+                <button type="button" id="m_nav_btn" class="flex-c-between z-index-90">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="m_nav_bg z-index-80"><!-- 모바일~큰태블릿 해상도 변경 시 메뉴 -->
+                    <nav id="m_nav"></nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="row1 bg-cover"></div>
+    </main>
+</body>
+</html>

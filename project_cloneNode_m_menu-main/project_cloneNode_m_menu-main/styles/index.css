@@ -1,0 +1,99 @@
+/* var */
+:root {
+    --color-primary:#66459C;
+    --color-dark:#222;
+}
+.flex-r-between {display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;}
+.flex-c-between {display:flex; flex-flow:column nowrap; justify-content: space-between; align-items: center;}
+.bg-cover {background-size:cover; background-position: center; background-repeat: no-repeat;}
+.z-index-80 {position:relative; z-index:80;}
+.z-index-90 {position:relative; z-index:90;}
+.z-index-100 {position:relative; z-index:100;}
+/* design */
+header {
+    padding:0 15px; margin:0 auto;
+    max-width:1800px; min-width:320px;
+    width:100%; height:80px;
+    position:fixed; left:0; top:0; 
+}
+header h1 {width:80px;}
+header h1 a {}
+header h1 a img {width:100%;}
+header .full_nav {display:none;}
+header .full_nav .menu {}
+header .full_nav .menu a {}
+header .lnb {gap:20px;}
+header .lnb .lang_contact {gap:10px;}
+header .lnb .lang_contact .lang {}
+header .lnb .lang_contact .lang a {font-size:0.85rem; color:#fff;}
+header .lnb .lang_contact .lang a.active {border-bottom:1px solid #fff;}
+header .lnb .lang_contact #contact_btn {
+    background-color: var(--color-primary);
+    color:#fff; font-size:0.75rem; 
+    width:110px; height:30px; border-radius:15px;
+    position:relative; overflow:hidden;
+}
+/*------------------------------------ contact hover start*/
+header .lnb .lang_contact #contact_btn:hover::before {
+    transform-origin:top center;
+    animation:scale100 0.4s linear both;
+}
+header .lnb .lang_contact #contact_btn:hover img {left:auto; right:15px;}
+header .lnb .lang_contact #contact_btn:hover span {right:40px;}
+header .lnb .lang_contact #contact_btn:hover::after {display:block;}
+/*------------------------------------ contact hover end*/
+header .lnb .lang_contact #contact_btn::before,
+header .lnb .lang_contact #contact_btn::after {
+    content:''; position:absolute; top:50%; transform:translateY(-50%);
+    background-color: var(--color-dark); width:20px; height:20px; border-radius:50%;
+}
+header .lnb .lang_contact #contact_btn::before {left:10px;}
+header .lnb .lang_contact #contact_btn::after {
+    right:10px; display:none; background-color: var(--color-primary);
+}
+header .lnb .lang_contact #contact_btn img {
+    width:9px; filter:invert(100%); position:absolute; right:auto; left:15px; top:50%; transform:translateY(-50%);
+}
+header .lnb .lang_contact #contact_btn span { 
+    position:absolute; right:15px; top:50%; transform:translateY(-50%);
+    transition:right 0.4s;
+}
+/* -------------------------------------모바일 메뉴 모양 시작 */
+header .lnb .mobile_ver {overflow:hidden;}
+header .lnb .mobile_ver #m_nav_btn {
+    width:32px; height:20px;
+}
+header .lnb .mobile_ver #m_nav_btn span {
+    background-color: var(--color-dark); height:3px; width:100%;
+    border-radius:10px;
+}
+header .lnb .mobile_ver .m_nav_bg {
+    position:fixed; right:-100%; opacity:0; top:0; height:100vh;
+    min-width:320px; width:100%; background-color: var(--color-dark); 
+    transition:right 0.4s, opacity 1s;
+}
+header .lnb .mobile_ver .m_nav_bg #m_nav {
+    transform:translate(25px, 100px);
+}
+header .lnb .mobile_ver .m_nav_bg #m_nav .menu {
+    display:flex; flex-flow:column nowrap; gap:40px;
+    align-items: flex-start;
+}
+header .lnb .mobile_ver .m_nav_bg #m_nav .menu a {font-size:1.2rem; color:#fff;}
+main {}
+main .row1 {background-image:url(../images/main-visual-off.jpg); height:100vh;}
+
+@media screen and (min-width:1200px) {
+    header .full_nav {display:block;}
+    header .full_nav .menu {gap:30px;}
+    header .full_nav .menu a {color:#fff;}
+    header .lnb .mobile_ver {display:none;}
+    header .lnb .mobile_ver .m_nav_bg {}
+    header .lnb .mobile_ver .m_nav_bg #m_nav {}
+}/* end : min-width:1200px) */
+
+/* animation */
+@keyframes scale100 {
+    0% {transform:scale(1) translateY(-50%);}
+    100% {transform:scale(10) translateY(-50%);}
+}
