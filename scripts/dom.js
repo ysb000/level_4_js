@@ -94,7 +94,7 @@ plusBtn.addEventListener('click', ()=>{
     console.log(typeof(countNumSpan.dataset.count)); //문자로 인식, 계산불가
     let currentNum= Number(countNumSpan.dataset.count); //문자를 숫자로 변환해서 저장 
     console.log(currentNum, typeof(currentNum)); //숫자로 변경된 점 확인
-    currentNum <10 ? (()=>{
+    currentNum < 10 ? (()=>{
         let plusTotal = ++currentNum; //숫자로 변환한 변수를 1증가해서 담은 증가변수
         countNumSpan.dataset.count =  plusTotal; //증가된 변수를 실제 data속성에 업데이트
         countNumSpan.textContent = plusTotal; //증가된 변수를 사용자가 보는 화면에 출력
