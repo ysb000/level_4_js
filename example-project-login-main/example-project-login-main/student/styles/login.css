@@ -1,0 +1,149 @@
+/* reset */
+* {
+    margin:0; padding:0;
+    line-height:1.0; list-style:none;
+    font-size:1.0em; color:#222;
+    text-decoration: none; letter-spacing: -0.02rem;
+    outline:none;
+}
+button {cursor:pointer; background:none; border:0;}
+input {background:none; border:0;}
+img {width:100%;}
+/* var */
+:root {
+    --color-primary:#222;
+    --color-light1:#f5f5f5;
+    --color-light2:#eee;
+    --color-light3:#bbb;
+    --color-light4:#888;
+    --color-kakao:rgb(254, 229, 0);
+    --font-size-xs:0.75rem;
+    --font-size-md:0.91rem;
+    --font-size-xl:1.1rem;
+    --font-size-xxl:1.2rem;
+    --line-h-md:150%;
+}
+.po-re {position:relative;}
+.po-ab {position:absolute; width:100%;}
+.po-fi {position:fixed; left:0; top:0; width:100%;}
+.z-index-900 {position:relative; z-index:900;}
+.z-index-800 {position:relative; z-index:800;}
+.z-index-700 {position:relative; z-index:700;}
+.flex-r {display:flex; flex-flow:row nowrap; justify-content: center; align-items: center;}
+.flex-r-between {display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center;}
+.flex-c {display:flex; flex-flow:column nowrap; justify-content: center; align-items: center;}
+
+/* design */
+/* ------------------------------1. 띠배너 */
+.top-bnr {
+    background: var(--color-primary);
+    height:30px; 
+}
+.top-bnr a {
+    color:var(--color-light1);
+    font-size:var(--font-size-xs);
+}
+.top-bnr .close {width:18px; right:10px;}
+.top-bnr .close img {filter:invert(100%);}
+/* ------------------------------2. 메인 상단 */
+main {border:1px solid var(--color-light2); width:370px; margin:0 auto; padding-bottom:20px;}
+main .top {
+    justify-content: space-between;
+    padding:0 20px; height:50px;
+}
+main .top .back {width:18px; }
+main .top .back img {transform:scaleX(-1);}
+main .top h1 {font-size:var(--font-size-xl);}
+main .top h1 a {}
+main .top .main_link {width:18px;}
+main .top .main_link img {}
+/* ------------------------------3. 로그인 설명 */
+main .login-box {gap:5px;}
+main .login-box h1 {margin:0 0 20px;}
+main .login-box p:nth-child(2) {}/* 쿠폰팩 */
+main .login-box p:nth-child(3) {font-size:var(--font-size-xs); margin:0 0 20px;}/* 카플친 */
+main .login-box .kakao {
+    background-color: var(--color-kakao);
+    font-weight:700; width:90%; line-height:45px; text-align: center;
+    border-radius:10px; 
+}
+main .login-box .welcome-pack {
+    background-color:var(--color-primary); margin:20px 0;
+    width:200px; height:100px; border-radius: 10px;
+}
+/* --------------------------------웰컴백 쿠폰 박스 좌우 원 표시 시작(실습1) */
+main .login-box .welcome-pack::before,
+main .login-box .welcome-pack::after {
+    content:''; display:block; 
+    width:30px; height:30px; border-radius:50%;
+    background-color: #fff; position:absolute; top:50%; transform:translateY(-50%);
+}
+main .login-box .welcome-pack::before {left:-15px;}
+main .login-box .welcome-pack::after {right:-15px;}
+/* --------------------------------웰컴백 쿠폰 박스 좌우 원 표시 종료 */
+main .login-box .welcome-pack h2 {
+    color: var(--color-light2); 
+    font-size:var(--font-size-xxl); margin:0 0 15px;
+}
+main .login-box .welcome-pack p {
+    color: var(--color-light2);
+    font-size:var(--font-size-xs);
+}
+main .login-box p:nth-child(6) {font-size:var(--font-size-md)}/* 쿠폰을드려요! */
+main .login-box p:nth-child(7) {width:90%; text-align:center; margin:30px 0;}/* 또는 */
+main .login-box p:nth-child(7) span {background:#fff; color:var(--color-light3);}
+main .login-box p:nth-child(7)::before { /* 또는 글자 뒤에 있는 선 */
+    content:''; display:block; background: var(--color-light2);
+    width:100%; height:1px;
+    position:absolute; top:50%;
+}
+/* ------------------------------4. 기존 회원 */
+/* ------------------------------------------------------------제목 */
+main .login-box #login-frm {width:95%; margin:0 auto;}
+main .login-box #login-frm .title {margin:0 0 20px;}
+main .login-box #login-frm .title button {
+    flex:1; border-bottom:2px solid var(--color-light2);
+    padding:15px 0; color:var(--color-light3);
+}
+main .login-box #login-frm .title .active {
+    font-weight:700; color:var(--color-primary);
+    border-color:var(--color-primary);
+}
+main .login-box #login-frm .title #member-btn1 {}
+main .login-box #login-frm .title #member-btn2 {}
+/* ------------------------------------------------------------내용 */
+main .login-box #login-frm .contents {}
+main .login-box #login-frm .contents ul {}
+main .login-box #login-frm .contents ul li {height:40px;}
+main .login-box #login-frm .contents ul li:nth-child(1),
+main .login-box #login-frm .contents ul li:nth-child(2) {border-bottom:1px solid var(--color-light2)}
+main .login-box #login-frm .contents ul li input[type=text],
+main .login-box #login-frm .contents ul li input[type=password] {
+    width:100%; font-size:var(--font-size-md);
+}
+main .login-box #login-frm .contents ul li input[type=text] {}
+main .login-box #login-frm .contents ul li input[type=password] {}
+main .login-box #login-frm .contents ul li input[type=password] + button {width:14px;}
+main .login-box #login-frm .contents ul li input[type=password] + button img {}
+/* -----------------------------------------------------아이디 저장 시작(실습2) */
+main .login-box #login-frm .contents ul li input[type=checkbox] {display:none;}
+main .login-box #login-frm .contents ul li input[type=checkbox] + label {
+    background: url(../images/unchecked.png) no-repeat left center/ 20px;
+    padding-left:24px; line-height:40px;  font-size:var(--font-size-md)
+}
+main .login-box #login-frm .contents ul li input[type=checkbox]:checked + label {
+    background: url(../images/approved.png) no-repeat left center/20px; 
+}
+/* -----------------------------------------------------아이디 저장 종료 */
+main .login-box #login-frm .contents ul li button[id*=member-login] {
+    background-color: var(--color-light2); width:100%; height:45px; border-radius:10px;
+    font-size: var(--font-size-xs);
+}
+main .login-box #login-frm .contents ul li span {}
+main .login-box #login-frm .contents ul li span a {font-size:var(--font-size-xs); color:var(--color-light4)}
+main .login-box #login-frm .contents ul li > a {font-size:var(--font-size-xs); color:var(--color-light4)}
+/* ------------------------------5. 비회원 주문조회 */
+main .login-box #login-frm .contents .non-member li:nth-child(3) {border-bottom:1px solid var(--color-light2); margin:0 0 10px;}
+main .login-box #login-frm .contents .non-member li input[type=text] + button {width:14px;}
+/* ------------------------------⭐js class */
+.display-hide {display:none;}
