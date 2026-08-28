@@ -36,14 +36,17 @@ opt_result.style.display = 'none';
 console.log(Boolean(colorSelect.dataset.color))
 
 function opt_y(opt1, opt2){
+    //색상과 사이즈 모두 선택했을때 옵션선택창이 나오도록 하는 조건
     Boolean(colorSelect.dataset.color) && Boolean(sizeSelect.dataset.size) ? (()=>{
-        opt_result.style.display = 'flex'
-        result_val.textContent = `${opt1} / ${opt2}`;
-        result_num.value = 1;
-        result_price.textContent = price.toLocaleString('ko-kr');
-        totalPrice.children[1].textContent = price.toLocaleString('ko-kr')+'원';
-        order_btn.style.backgroundColor = '#00A1FF'
-        return;
+        if(sizeSelect.selectedIndex > 0 && colorSelect.selectedIndex > 0){ //도움말
+            opt_result.style.display = 'flex'
+            result_val.textContent = `${opt1} / ${opt2}`;
+            result_num.value = 1;
+            result_price.textContent = price.toLocaleString('ko-kr');
+            totalPrice.children[1].textContent = price.toLocaleString('ko-kr')+'원';
+            order_btn.style.backgroundColor = '#00A1FF'
+            return;
+        }
     })() : console.log('false');
 }
 
