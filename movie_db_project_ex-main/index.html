@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CGV</title>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <!-- design -->
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <!-- 영화 -->
+  <script src="./scripts/movie_db.js"></script> <!-- 정보를 가져오는 용도의 js로 defer를 적지 않아도 됨 -->
+  <script src="./scripts/index.js"defer></script>
+  <!-- 애니메이션 -->
+  <script src="./scripts/anime_db.js"></script>
+</head>
+<body>
+  <header>
+    <h1><a href="index.html"><img src="./images/logo_cgv.svg" alt="CGV"></a></h1>
+  </header>
+  <main>
+    <!-- ------------------무비차트 -->
+    <h2>무비차트</h2>
+    <!-- li, h, p ,img 는 반복되는 값으로 js에서 처리할 예정으로 html에서 작성하지 않음 -->
+    <!-- 태그는 변하지 않지만 태그 안에 데이터는 업데이트되면서 쌓이게 됨 태그와 별도로 데이터만 모여있는 장소를 만들어줘야함 이를 DB라 함 -->
+    <ul class="movie_wrap1">
+      <!-- JS 삽입 예정(아래 태그 계획(작업 후 반드시 주석!)) -->
+      <!-- <li>
+        <h3>영화제목</h3>
+        <p>개봉일</p>
+        <a href="주소"><img src="포스터경로" alt="포스터명"></a>
+      </li> -->
+    </ul>
+    <!-- ------------------상영예정 -->
+    <h2>상영예정</h2>
+  </main>
+</body>
+</html>

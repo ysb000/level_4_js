@@ -1,0 +1,9 @@
+header, main {max-width: 460px; margin:0 auto;}
+img {width:100%}
+header, h1 {width:200px;}
+main h2 {margin:20px 0;}
+main .movie_wrap1 {display: flex; flex-flow:row wrap;}
+main .movie_wrap1 li {width:33.33%;}
+
+main .anime_wrap {display: flex; flex-flow:row wrap;}
+main .anime_wrap li {width:20%}
