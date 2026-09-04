@@ -38,3 +38,49 @@ for(let i=0; i<10; i++){
     animeWrap.appendChild(animeLi);
     
 }
+
+/* ------------------------------------26/09/04 */
+/* 무비차트+swiper */
+//swiper-slide 반복 생성해서 swiper-wrapper 안에 붙여넣기
+//swiper 플러그인 함수의 연결은 swiper에 하기 때문에 변수로 만들고 나머지는 자식으로 잡는 것이 가능
+const chart_swiper = document.querySelector('.chart_swiper');
+
+const chart_swiper_func = new Swiper(chart_swiper, {
+    slidesPerView:2, //보이는 개수
+    spaceBetween:10, //여백
+
+}); //swiper 플러그인 함수 최종 연결
+
+for(let i=0; i<5; i++ ){
+    const chart_slide = document.createElement('div'); //생성
+    chart_slide.classList.add('swiper-slide'); //클래스 연결
+
+    //div 안 내용 작성
+    chart_slide.innerHTML = `<p class="num">${moviesDB[i].id}위</p>`;
+    chart_slide.innerHTML += `<h3>${moviesDB[i].title}</h3>`;
+    chart_slide.innerHTML += `<p class="rating">${moviesDB[i].rating}점</p>`;
+    chart_slide.innerHTML += `<p class="story">${moviesDB[i].summary}</p>`;
+    chart_slide.style.backgroundImage = `url(${moviesDB[i].poster})`;
+
+    chart_swiper.children[0].append(chart_slide); //붙여넣기
+}
+
+/* -----------------------애니메이션 swiper */
+const ani_swiper = document.querySelector('.ani_swiper');
+const ani_swiper_func = new Swiper(ani_swiper,{
+    slidesPerView:3,
+    spaceBetween:10,
+});
+
+for(let i=0; i<6; i++){
+    const ani_slide = document.createElement('div');
+    ani_slide.classList.add('swiper-slide');
+
+    ani_slide.innerHTML = `<p class="num">${animeDb[i].id}</p>`;
+    ani_slide.innerHTML += `<h3>${animeDb[i].title}</h3>`;
+    ani_slide.innerHTML += `<p class="genre">${animeDb[i].genre}</p>`;
+    ani_slide.innerHTML += `<p class="story">${animeDb[i].summary}</p>`;
+    ani_slide.style.backgroundImage = `url(${animeDb[i].poster})`;
+
+    ani_swiper.children[0].append(ani_slide);
+}
