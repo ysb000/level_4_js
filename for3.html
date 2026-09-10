@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for~in, forEach</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <script src="./scripts/for3.js" defer></script>
+    <style>
+        /* 제목 활성화 */
+        .tab_title .active {font-weight: 800;}
+        /* 내용 비활성화 */
+        .tab_contents > li > ul {display: none;}
+        /* 내용 활성화 */
+        .tab_contents .active {display: block;}
+    </style>
+</head>
+<body>
+    <h1>for~in</h1>
+    <form action="#" method="post" id="inFrm">
+        <input type="text" name="user_id" id="user_id" placeholder="아이디">
+        <input type="password" name="user_pw" id="user_pw" placeholder="비밀번호">
+        <button type="button" id="login_btn">로그인</button>
+    </form>
+    <p id="login_msg"><!-- 로그인 성공&실패 메세지 출력 위치 --></p>
+    <hr>
+    <h1>for~of</h1>
+    <h2>분양동물</h2>
+    <ul class="list"><!-- 삽입위치 --></ul>
+    <hr>
+    <h1>forEach</h1>
+    <section>
+        <div class="tab_title"> <!-- 탭 제목(1개 활성화 디자인) -->
+            <a href="#" class="active">여성</a>
+            <a href="#">남성</a>
+        </div>
+        <ul class="tab_contents"> <!-- 탭 내용(1개만 활성화(나머지 숨기기)) -->
+            <li><!-- 여성 컨텐츠 -->
+                <ul class="female active">
+                    <li><a href="#">가디건</a></li>
+                    <li><a href="#">원피스</a></li>
+                    <li><a href="#">신발</a></li>
+                </ul>
+            </li>
+            <li><!-- 남성 컨텐츠 -->
+                <ul class="male">
+                    <li><a href="#">가디건</a></li>
+                    <li><a href="#">정장</a></li>
+                    <li><a href="#">신발</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
