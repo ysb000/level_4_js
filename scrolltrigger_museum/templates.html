@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국립중앙박물관 문화상품</title>
+    <!-- GSAP 메인 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <!-- ScrollTrigger 플러그인 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/templates.css">
+    <script src="./scripts/templates.js" defer></script>
+    <style>
+        /* javascript animation + class, id 작성위치 */
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#"><img src="./images/logo.png" alt="국립중앙박물관 문화상품"></a></h1>
+        <nav>
+            <a href="#"><img src="./images/ic_basket.png" alt=""></a>
+            <a href="#"><img src="./images/ic_like_big.png" alt=""></a>
+            <a href="#"><img src="./images/ic_menu_gy.png" alt=""></a>
+        </nav>
+    </header>
+    <main>
+        <!-- 1. 광고배너 -->
+        <section class="hero">
+            <div class="swiper hero_bnr">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide s1"><img src="./images/bnr001.jpg" alt=""></div>
+                    <div class="swiper-slide s2"><img src="./images/bnr002.jpg" alt=""></div>
+                    <div class="swiper-slide s3"><img src="./images/bnr003.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </section>
+        <!-- 2. 베스트  -->
+        <div class="product_list best">
+            <div class="title">
+                <h1>이유있는 <em>베스트 아이템</em></h1>
+            </div>
+            <section>
+                <div class="swiper best-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product001.jpg" alt=""></a>
+                            <p class="brand">미니어쳐</p>
+                            <h2>반가사유상 미니어처 ver3</h2>
+                            <p class="price">65,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product002.jpg" alt=""></a>
+                            <p class="brand">배지/키링</p>
+                            <h2>한국의 미 단청 키캡 키링</h2>
+                            <p class="price">19,800</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_md">MD추천</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product003.jpg" alt=""></a>
+                            <p class="brand">컵/텀블러</p>
+                            <h2>취객선비 3인방 변색 잔세트</h2>
+                            <p class="price">26,000</p>
+                            <p class="tag"><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product004.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>이순신 전립 와인마개</h2>
+                            <p class="price">25,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product005.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>호랑이와 까치 빗</h2>
+                            <p class="price">12,000</p>
+                            <p class="tag"><span class="tag_md">MD추천</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product006.jpg" alt=""></a>
+                            <p class="brand">특별전시</p>
+                            <h2>청화 백자 접시</h2>
+                            <p class="price">18,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_md">MD추천</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product007.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>반가사유상 미니어처 ver3</h2>
+                            <p class="price">65,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_md">MD추천</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product008.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>청자 접시세트</h2>
+                            <p class="price">45,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_md">MD추천</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product009.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>박물관 키링(백자 모란)</h2>
+                            <p class="price">20,000</p>
+                            <p class="tag"></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product010.jpg" alt=""></a>
+                            <p class="brand">우산/양산</p>
+                            <h2>신라의 미소 우산</h2>
+                            <p class="price">55,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_new">NEW</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- 3. 광고  -->
+        <div class="bnr">
+            <div class="ad ad1">
+                <div class="bg"><img src="./images/aside001.jpg" alt=""></div>
+                <h1><span>천년의 멋과 이야기가</span><span>살아 숨 쉬는 공간</span></h1>
+            </div>
+            <div class="ad ad2">
+                <div class="bg"><img src="./images/aside002.jpg" alt=""></div>
+                <h1>시대를 뛰어넘는 보물들과의 만남</h1>
+            </div>
+            <div class="ad ad3">
+                <div class="bg"><img src="./images/aside003.jpg" alt=""></div>
+                <h1>무료 상설 전시부터 다채로운 특별전까지!</h1>
+            </div>
+        </div>
+        <!-- 4. 박물관  -->
+        <div class="product_list book">
+            <div class="title">
+                <h1>책으로 만나는 <em>박물관</em></h1>
+            </div>
+            <section>
+                <div class="swiper book-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product007.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>반가사유상 미니어처 ver3</h2>
+                            <p class="price">65,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_md">MD추천</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product008.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>청자 접시세트</h2>
+                            <p class="price">45,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_md">MD추천</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product009.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>박물관 키링(백자 모란)</h2>
+                            <p class="price">20,000</p>
+                            <p class="tag"></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product010.jpg" alt=""></a>
+                            <p class="brand">우산/양산</p>
+                            <h2>신라의 미소 우산</h2>
+                            <p class="price">55,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product001.jpg" alt=""></a>
+                            <p class="brand">미니어쳐</p>
+                            <h2>반가사유상 미니어처 ver3</h2>
+                            <p class="price">65,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product002.jpg" alt=""></a>
+                            <p class="brand">배지/키링</p>
+                            <h2>한국의 미 단청 키캡 키링</h2>
+                            <p class="price">19,800</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_md">MD추천</span><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product003.jpg" alt=""></a>
+                            <p class="brand">컵/텀블러</p>
+                            <h2>취객선비 3인방 변색 잔세트</h2>
+                            <p class="price">26,000</p>
+                            <p class="tag"><span class="tag_new">NEW</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product004.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>이순신 전립 와인마개</h2>
+                            <p class="price">25,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product005.jpg" alt=""></a>
+                            <p class="brand">기타</p>
+                            <h2>호랑이와 까치 빗</h2>
+                            <p class="price">12,000</p>
+                            <p class="tag"><span class="tag_md">MD추천</span></p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="./images/product006.jpg" alt=""></a>
+                            <p class="brand">특별전시</p>
+                            <h2>청화 백자 접시</h2>
+                            <p class="price">18,000</p>
+                            <p class="tag"><span class="tag_best">BEST</span><span class="tag_md">MD추천</span><span class="tag_new">NEW</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>(상담시간 : 10시~12시) 고객 상담은 1:1문의 게시판 또는 이메일로 문의바랍니다.</p>
+        <p>&copy; copyright 문화체육관광부 국립문화박물관</p>
+    </footer>
+
+    <script>
+
+        // ScrollTrigger 플러그인 등록
+        gsap.registerPlugin(ScrollTrigger);
+
+        //스크롤 트리거 애니메이션 작성 위치
+        
+
+        // 웹브라우저 스크롤 복원 기능 리셋하고 위에서 시작하기
+        if ('scrollRestoration' in history) { history.scrollRestoration = 'manual';}
+        window.addEventListener('load', () => {
+            setTimeout(() => { window.scrollTo(0, 0); //pin과 scrollTo 가 겹치는 문제를 해결하기 위한 타이머함수
+                ScrollTrigger.refresh(); // GSAP 위치 값 재계산
+            }, 10);
+        });
+    </script>
+
+</body>
+</html>
